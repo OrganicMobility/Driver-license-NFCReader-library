@@ -384,16 +384,16 @@ public struct DriversLicenseCard {
                 let nicknameData = field.value.split(count: 2)
                 nickname = String?(jisX0208Data: nicknameData)
             case 0x14:
-                let commonNameData = field.value.split(count: 2)
-                commonName = String?(jisX0208Data: commonNameData)
+//                let commonNameData = field.value.split(count: 2)
+                commonName = "" //String?(jisX0208Data: commonNameData)
             case 0x15:
-                let uniformNameData = field.value.split(count: 2)
-                uniformName = String?.init(jisX0208Data: uniformNameData)
+//                let uniformNameData = field.value.split(count: 2)
+                uniformName = "" //String?.init(jisX0208Data: uniformNameData)
             case 0x16:
                 birthdate = String(data: Data(field.value), encoding: .shiftJIS).toDateFromJapanese()
             case 0x17:
-                let addressData = field.value.split(count: 2)
-                address = String?.init(jisX0208Data: addressData)
+//                let addressData = field.value.split(count: 2)
+                address = "" //String?.init(jisX0208Data: addressData)
             case 0x18:
                 issuanceDate = String(data: Data(field.value), encoding: .shiftJIS).toDateFromJapanese()
             case 0x19:
